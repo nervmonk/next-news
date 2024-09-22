@@ -74,10 +74,8 @@ export default function Header() {
           <div className="col-lg-4">
             <a href="index.html" className="navbar-brand p-0 d-none d-lg-block">
               <h1 className="m-0 display-4 text-uppercase text-primary">
-                Sains
-                <span className="text-secondary font-weight-normal">
-                  Donesia
-                </span>
+                Tek
+                <span className="text-secondary font-weight-normal">Nika</span>
               </h1>
             </a>
           </div>
@@ -92,8 +90,8 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
           <a href="index.html" className="navbar-brand d-block d-lg-none">
             <h1 className="m-0 display-4 text-uppercase text-primary">
-              Sains
-              <span className="text-white font-weight-normal">Donesia</span>
+              Tek
+              <span className="text-white font-weight-normal">Nika</span>
             </h1>
           </a>
           <button
