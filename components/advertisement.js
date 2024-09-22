@@ -6,7 +6,17 @@ export default function Advertisement() {
       </div>
       <div className="bg-white text-center border border-top-0 p-3">
         <a href="">
-          <img className="img-fluid" src="/img/news-800x500-2.jpg" alt="" />
+          <img
+            className="img-fluid"
+            src="/img/bokchoy.jpg"
+            alt=""
+            style={{
+              width: "100%",
+              height: "100%",
+              maxHeight: "250px",
+              objectFit: "cover",
+            }}
+          />
         </a>
       </div>
     </div>

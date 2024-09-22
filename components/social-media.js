@@ -33,7 +33,7 @@ export default function SocialMedia() {
           style={{ background: "#0185AE" }}
         >
           <i
-            className="fab fa-linkedin-in text-center py-4 mr-3"
+            className="fab fa-tiktok text-center py-4 mr-3"
             style={{ width: "65px", background: "rgba(0, 0, 0, .2)" }}
           ></i>
           <span className="font-weight-medium">12,345 Connects</span>
@@ -59,17 +59,6 @@ export default function SocialMedia() {
             style={{ width: "65px", background: "rgba(0, 0, 0, .2)" }}
           ></i>
           <span className="font-weight-medium">12,345 Subscribers</span>
-        </a>
-        <a
-          href=""
-          className="d-block w-100 text-white text-decoration-none"
-          style={{ background: "#055570" }}
-        >
-          <i
-            className="fab fa-vimeo-v text-center py-4 mr-3"
-            style={{ width: "65px", background: "rgba(0, 0, 0, .2)" }}
-          ></i>
-          <span className="font-weight-medium">12,345 Followers</span>
         </a>
       </div>
     </div>

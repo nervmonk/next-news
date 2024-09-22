@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NavLink from "./nav-link";
+import NavDropdown from "./dropdown-nav";
 
 export default function Header() {
   return (
@@ -91,7 +92,8 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
           <a href="index.html" className="navbar-brand d-block d-lg-none">
             <h1 className="m-0 display-4 text-uppercase text-primary">
-              Biz<span className="text-white font-weight-normal">News</span>
+              Sains
+              <span className="text-white font-weight-normal">Donesia</span>
             </h1>
           </a>
           <button
@@ -113,28 +115,7 @@ export default function Header() {
               <NavLink href="/policy" children="Policy" />
               <NavLink href="/pop" children="Pop" />
               <NavLink href="/culture" children="Culture" />
-              <NavLink href="/store" children="Store" />
-              <NavLink href="/forum" children="Forum" />
-              <div className="nav-item dropdown">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                >
-                  Dropdown
-                </a>
-                <div className="dropdown-menu rounded-0 m-0">
-                  <a href="#" className="dropdown-item">
-                    Menu item 1
-                  </a>
-                  <a href="#" className="dropdown-item">
-                    Menu item 2
-                  </a>
-                  <a href="#" className="dropdown-item">
-                    Menu item 3
-                  </a>
-                </div>
-              </div>
+              <NavDropdown />
               <NavLink href="/contact" children="Contact" />
             </div>
             <div

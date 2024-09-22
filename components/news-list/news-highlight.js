@@ -1,12 +1,14 @@
-export default function NewsHighlight() {
+import Link from "next/link";
+
+export default function NewsHighlight({ category }) {
   return (
     <div className="col-lg-12">
       <div className="row news-lg mx-0 mb-3">
         <div className="col-md-6 h-100 px-0">
           <img
             className="img-fluid h-100"
-            src="/img/news-700x435-5.jpg"
-            style={{ objectFit: "cover" }}
+            src="/img/unsplash.jpg"
+            style={{ objectFit: "cover", width: "100%" }}
           />
         </div>
         <div className="col-md-6 d-flex flex-column border bg-white h-100 px-0">
@@ -16,18 +18,18 @@ export default function NewsHighlight() {
                 className="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                 href=""
               >
-                Business
+                {category}
               </a>
               <a className="text-body" href="">
                 <small>Jan 01, 2045</small>
               </a>
             </div>
-            <a
+            <Link
               className="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
-              href=""
+              href={`/${category}/lorem-ipsum`}
             >
               Lorem ipsum dolor sit amet elit...
-            </a>
+            </Link>
             <p className="m-0">
               Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum
               clita rebum dolor stet amet justo
@@ -42,7 +44,7 @@ export default function NewsHighlight() {
                 height="25"
                 alt=""
               />
-              <small>John Doe</small>
+              <small>Ryan Dwiky</small>
             </div>
             <div className="d-flex align-items-center">
               <small className="ml-3">

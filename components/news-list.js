@@ -9,7 +9,7 @@ import Advertisement from "./advertisement";
 import AdImage from "./ad-image";
 import SectionTitle from "./section-title";
 
-export default function NewsList() {
+export default function NewsList({ category }) {
   return (
     <div className="container-fluid pt-5 mb-3">
       <div className="container">
@@ -17,35 +17,16 @@ export default function NewsList() {
           <div className="col-lg-8">
             <div className="row">
               <SectionTitle title="Highlight" />
-              <NewsHighlight />
+              <NewsHighlight category={category} />
               <AdImage />
               <SectionTitle title="Newest" />
-              <BigNewsHeader />
-              <BigNewsHeader />
-              <BigNewsHeader />
-              <BigNewsHeader />
-              <div className="col-lg-6">
-                <SmallNewsHeader />
-                <SmallNewsHeader />
-              </div>
-              <div className="col-lg-6">
-                <SmallNewsHeader />
-                <SmallNewsHeader />
-              </div>
+              <BigNewsHeader category={category} />
               <AdImage />
-              <div className="col-lg-6">
-                <SmallNewsHeader />
-                <SmallNewsHeader />
-              </div>
-              <div className="col-lg-6">
-                <SmallNewsHeader />
-                <SmallNewsHeader />
-              </div>
+              <SmallNewsHeader category={category} />
             </div>
           </div>
-
           <div className="col-lg-4">
-            <TrendingNews />
+            <TrendingNews category={category} />
             <Advertisement />
             <SocialMedia />
             <NewsLetter />
