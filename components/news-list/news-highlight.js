@@ -26,19 +26,17 @@ export default function NewsHighlight({ category }) {
             </div>
             <Link
               className="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
-              href={`/${category.tag.toLowerCase()}/lorem-ipsum`}
+              href={`/${category.tag.toLowerCase()}/${category.id}`}
             >
               {category.title}
             </Link>
-            <p className="m-0">
-              {category.imgCaption}
-            </p>
+            <p className="m-0">{category.imgCaption}</p>
           </div>
           <div className="d-flex justify-content-between bg-white border-top mt-auto p-4">
             <div className="d-flex align-items-center">
               <img
                 className="rounded-circle mr-2"
-                src="/img/user.jpg"
+                src={category.writerImg}
                 width="25"
                 height="25"
                 alt=""
@@ -47,10 +45,12 @@ export default function NewsHighlight({ category }) {
             </div>
             <div className="d-flex align-items-center">
               <small className="ml-3">
-                <i className="far fa-eye mr-2"></i>{category.readCount}
+                <i className="far fa-eye mr-2"></i>
+                {category.readCount}
               </small>
               <small className="ml-3">
-                <i className="far fa-comment mr-2"></i>{category.commentCount}
+                <i className="far fa-comment mr-2"></i>
+                {category.commentCount}
               </small>
             </div>
           </div>

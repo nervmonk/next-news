@@ -1,17 +1,10 @@
 import Link from "next/link";
 
 export default function TrendingNews({ category }) {
-  const pics = [
-    "/img/news-110x110-2.jpg",
-    "/img/ryan.jpg",
-    "/img/joker.jpg",
-    "/img/unsplash.jpg",
-    "/img/news-110x110-1.jpg",
-  ];
   return (
     <div className="mb-3">
       <div className="section-title mb-0">
-        <h4 className="m-0 text-uppercase font-weight-bold">Banyak Dibaca</h4>
+        <h4 className="m-0 text-uppercase font-weight-bold">Most Popular</h4>
       </div>
       <div className="bg-white border border-top-0 p-3">
         {category.map((news) => (
@@ -46,7 +39,15 @@ export default function TrendingNews({ category }) {
               </div>
               <Link
                 className="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                href={`/${news.tag.toLowerCase()}/lorem-ipsum`}
+                href={`/${news.tag.toLowerCase()}/${news.id}`}
+                style={{
+                  whiteSpace: "normal", // Allow wrapping
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  display: "-webkit-box",
+                  WebkitBoxOrient: "vertical",
+                  WebkitLineClamp: 2, // Limit to 2 lines
+                }}
               >
                 {news.title}
               </Link>

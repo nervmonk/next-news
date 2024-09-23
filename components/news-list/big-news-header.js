@@ -14,7 +14,10 @@ export default function BigNewsHeader({ category }) {
             }}
           />
         </div>
-        <div className="bg-white border border-top-0 p-4">
+        <div
+          className="bg-white border border-top-0 p-4"
+          style={{ minHeight: "250px" }}
+        >
           <div className="mb-2">
             <a
               className="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
@@ -28,13 +31,11 @@ export default function BigNewsHeader({ category }) {
           </div>
           <Link
             className="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
-            href={`/${news.tag.toLowerCase()}/lorem-ipsum`}
+            href={`/${news.tag.toLowerCase()}/${news.id}`}
           >
             {news.title}
           </Link>
-          <p className="m-0">
-            {news.imgCaption}
-          </p>
+          <p className="m-0">{news.imgCaption}</p>
         </div>
         <div className="d-flex justify-content-between bg-white border border-top-0 p-4">
           <div className="d-flex align-items-center">
@@ -49,10 +50,12 @@ export default function BigNewsHeader({ category }) {
           </div>
           <div className="d-flex align-items-center">
             <small className="ml-3">
-              <i className="far fa-eye mr-2"></i>{news.readCount}
+              <i className="far fa-eye mr-2"></i>
+              {news.readCount}
             </small>
             <small className="ml-3">
-              <i className="far fa-comment mr-2"></i>{news.commentCount}
+              <i className="far fa-comment mr-2"></i>
+              {news.commentCount}
             </small>
           </div>
         </div>
