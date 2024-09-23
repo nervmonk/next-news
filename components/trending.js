@@ -14,15 +14,15 @@ export default function TrendingNews({ category }) {
         <h4 className="m-0 text-uppercase font-weight-bold">Banyak Dibaca</h4>
       </div>
       <div className="bg-white border border-top-0 p-3">
-        {pics.map((pic, id) => (
+        {category.map((news) => (
           <div
             className="d-flex align-items-center bg-white mb-3"
             style={{ height: "100px" }}
-            key={id}
+            key={news.id}
           >
             <img
               className="img-fluid"
-              src={pic}
+              src={news.imgUrl}
               alt=""
               style={{
                 width: "100%",
@@ -38,17 +38,17 @@ export default function TrendingNews({ category }) {
                   className="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
                   href=""
                 >
-                  Business
+                  {news.tag}
                 </a>
                 <a className="text-body" href="">
-                  <small>Jan 01, 2045</small>
+                  <small>{news.datetime}</small>
                 </a>
               </div>
               <Link
                 className="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                href={`/${category}/lorem-ipsum`}
+                href={`/${news.tag.toLowerCase()}/lorem-ipsum`}
               >
-                Lorem ipsum dolor sit amet elit...
+                {news.title}
               </Link>
             </div>
           </div>

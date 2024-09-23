@@ -12,7 +12,7 @@ export default function SingleNews() {
             <div className="position-relative mb-3">
               <img
                 className="img-fluid w-100"
-                src="/img/demonstration.jpg"
+                src="/img/workers.jpg"
                 style={{
                   objectFit: "cover",
                   height: "100%",
@@ -20,15 +20,18 @@ export default function SingleNews() {
                   maxHeight: "540px",
                 }}
               />
+              <blockquote className="blockquote">
+                <p className="mb-0">
+                  A well-known quote, contained in a blockquote element.
+                </p>
+                <footer className="blockquote-footer">
+                  Someone famous in{" "}
+                  <cite title="Source Title">Source Title</cite>
+                </footer>
+              </blockquote>
               <div className="bg-white border border-top-0 p-4">
                 <div className="d-flex justify-content-between mb-3">
                   <div className="d-flex align-items-center">
-                    <a
-                      className="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                      href=""
-                    >
-                      Business
-                    </a>
                     <a className="text-body" href="">
                       Jan 01, 2045
                     </a>
@@ -41,11 +44,11 @@ export default function SingleNews() {
                       height="25"
                       alt=""
                     />
-                    <span>Ryan Dwiky</span>
+                    <span>Putra Nababan</span>
                   </div>
                 </div>
                 <h1 className="mb-3 text-secondary text-uppercase font-weight-bold">
-                  Story About Lila and the Golden Key
+                  Story About Kris and Her Love with Cats
                 </h1>
                 <p>
                   Once upon a time in a quaint little village nestled between
