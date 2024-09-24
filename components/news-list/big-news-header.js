@@ -31,7 +31,7 @@ export default function BigNewsHeader({ category }) {
           </div>
           <Link
             className="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
-            href={`/${news.tag.toLowerCase()}/${news.id}`}
+            href={`/${news.tag.toLowerCase()}/${news.path}`}
           >
             {news.title}
           </Link>

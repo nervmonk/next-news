@@ -26,7 +26,7 @@ export default function NewsHighlight({ category }) {
             </div>
             <Link
               className="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
-              href={`/${category.tag.toLowerCase()}/${category.id}`}
+              href={`/${category.tag.toLowerCase()}/${category.path}`}
             >
               {category.title}
             </Link>

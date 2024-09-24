@@ -1,8 +1,8 @@
 import { DUMMY_NEWS } from "@component/lib/data";
 
 export default function News({ params }) {
-  const id = params.slug;
-  const news = DUMMY_NEWS.find((item) => item.id === +id);
+  const path = params.slug;
+  const news = DUMMY_NEWS.find((item) => item.path === path);
 
   return (
     <div className="position-relative mb-3">

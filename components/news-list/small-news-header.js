@@ -32,7 +32,7 @@ export default function SmallNewsHeader({ category }) {
           </div>
           <Link
             className="h6 m-0 text-secondary text-uppercase font-weight-bold"
-            href={`/${news.tag.toLowerCase()}/${news.id}`}
+            href={`/${news.tag.toLowerCase()}/${news.path}`}
           >
             {news.title}
           </Link>
