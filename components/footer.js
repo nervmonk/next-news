@@ -226,8 +226,8 @@ export default function Footer() {
         style={{ background: "#111111" }}
       >
         <p className="m-0 text-center">
-          &copy; <a href="#">SainsDonesia.com</a>. All Rights Reserved. Design
-          by <a href="https://dwiky-cv.web.app">HTML Codex</a>
+          &copy; <a href="#">teknika.id</a>. All Rights Reserved. Design by{" "}
+          <a href="https://dwiky-cv.web.app">HTML Codex</a>
         </p>
       </div>
     </>

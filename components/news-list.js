@@ -13,9 +13,20 @@ import { DUMMY_NEWS } from "@component/lib/data";
 export default function NewsList({ category }) {
   const sortedNews = category.sort((a, b) => b.readCount - a.readCount);
   const bigNews = [sortedNews[1], sortedNews[2], sortedNews[3], sortedNews[4]];
-  const smallNews = [sortedNews[5], sortedNews[6], sortedNews[7], sortedNews[8]];
+  const smallNews = [
+    sortedNews[5],
+    sortedNews[6],
+    sortedNews[7],
+    sortedNews[8],
+  ];
   const trendingSort = DUMMY_NEWS.sort((a, b) => b.readCount - a.readCount);
-  const trending = [trendingSort[0], trendingSort[1], trendingSort[2], trendingSort[3], trendingSort[4]];
+  const trending = [
+    trendingSort[0],
+    trendingSort[1],
+    trendingSort[2],
+    trendingSort[3],
+    trendingSort[4],
+  ];
   return (
     <div className="container-fluid pt-5 mb-3">
       <div className="container">
