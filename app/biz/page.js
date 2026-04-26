@@ -28,7 +28,7 @@ export default function NationalNews() {
       <div className="col-12 d-flex justify-content-center">
         <ul className="pagination justify-content-center">
           <li className="page-item disabled">
-            <a className="page-link" href="#" tabindex="-1">
+            <a className="page-link" href="#" tabIndex="-1">
               Previous
             </a>
           </li>
