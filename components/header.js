@@ -117,7 +117,6 @@ export default function Header() {
           <div
             className={`collapse navbar-collapse justify-content-between px-0 px-lg-3 ${isNavOpen ? "show" : ""
               }`}
-            id="navbarCollapse"
           >
             <div className="navbar-nav mr-auto py-0">
               <NavLink href="/" children="Home" onClick={closeNav} />

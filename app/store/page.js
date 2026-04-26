@@ -14,7 +14,7 @@ export default function StorePage() {
                     </div>
 
                     {DUMMY_MERCH.map((product) => (
-                        <div key={product.id} className="col-lg-3 col-md-6 mb-4">
+                        <div key={product.id} className="col-lg-3 col-md-6 col-6 mb-4">
                             <div className="bg-white border rounded shadow-sm h-100 d-flex flex-column overflow-hidden product-card">
                                 <div className="position-relative overflow-hidden" style={{ height: "250px" }}>
                                     <img
