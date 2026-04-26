@@ -1,5 +1,6 @@
 import NewsSlider from "@component/components/news-slider";
 import NewsList from "@component/components/news-list";
+import HotForum from "@component/components/hot-forum";
 import { DUMMY_NEWS } from "@component/lib/data";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <>
       <NewsSlider />
+      <HotForum />
       <NewsList category={news} />
     </>
   );

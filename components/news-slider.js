@@ -7,7 +7,7 @@ export default function NewsSlider() {
             <div className="position-relative" style={{ height: "500px" }}>
               <img
                 className="img-fluid h-100"
-                src="img/news-800x500-1.jpg"
+                src="/img/news-800x500-1.jpg"
                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 alt="test"
               />
@@ -42,7 +42,7 @@ export default function NewsSlider() {
               >
                 <img
                   className="img-fluid w-100 h-100"
-                  src="img/news-700x435-1.jpg"
+                  src="/img/news-700x435-1.jpg"
                   style={{ objectFit: "cover" }}
                 />
                 <div className="overlay">
@@ -73,7 +73,7 @@ export default function NewsSlider() {
               >
                 <img
                   className="img-fluid w-100 h-100"
-                  src="img/news-700x435-2.jpg"
+                  src="/img/news-700x435-2.jpg"
                   style={{ objectFit: "cover" }}
                 />
                 <div className="overlay">
@@ -104,7 +104,7 @@ export default function NewsSlider() {
               >
                 <img
                   className="img-fluid w-100 h-100"
-                  src="img/news-700x435-3.jpg"
+                  src="/img/news-700x435-3.jpg"
                   style={{ objectFit: "cover" }}
                 />
                 <div className="overlay">
@@ -135,7 +135,7 @@ export default function NewsSlider() {
               >
                 <img
                   className="img-fluid w-100 h-100"
-                  src="img/news-700x435-4.jpg"
+                  src="/img/news-700x435-4.jpg"
                   style={{ objectFit: "cover" }}
                 />
                 <div className="overlay">

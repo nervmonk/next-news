@@ -1,8 +1,20 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import NavLink from "./nav-link";
 import NavDropdown from "./dropdown-nav";
 
 export default function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <>
       <div className="container-fluid d-none d-lg-block">
@@ -72,49 +84,50 @@ export default function Header() {
         </div>
         <div className="row align-items-center bg-white py-3 px-lg-5">
           <div className="col-lg-4">
-            <a href="index.html" className="navbar-brand p-0 d-none d-lg-block">
+            <Link href="/" className="navbar-brand p-0 d-none d-lg-block">
               <h1 className="m-0 display-4 text-uppercase text-primary">
                 Tek
                 <span className="text-secondary font-weight-normal">Nika</span>
               </h1>
-            </a>
+            </Link>
           </div>
           <div className="col-lg-8 text-center text-lg-right">
-            <a href="https://htmlcodex.com">
-              <img className="img-fluid" src="img/ads-728x90.png" alt="" />
-            </a>
+            <Link href="https://htmlcodex.com">
+              <img className="img-fluid" src="/img/ads-728x90.png" alt="" />
+            </Link>
           </div>
         </div>
       </div>
       <div className="container-fluid p-0">
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
-          <a href="index.html" className="navbar-brand d-block d-lg-none">
-            <h1 className="m-0 display-4 text-uppercase text-primary">
+          <Link href="/" className="navbar-brand d-block d-lg-none">
+            <h1 className="m-0 text-uppercase text-primary" style={{ fontSize: "1.5rem", fontWeight: "700" }}>
               Tek
               <span className="text-white font-weight-normal">Nika</span>
             </h1>
-          </a>
+          </Link>
           <button
             type="button"
             className="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#navbarCollapse"
+            onClick={toggleNav}
+            style={{ cursor: "pointer" }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="collapse navbar-collapse justify-content-between px-0 px-lg-3"
+            className={`collapse navbar-collapse justify-content-between px-0 px-lg-3 ${isNavOpen ? "show" : ""
+              }`}
             id="navbarCollapse"
           >
             <div className="navbar-nav mr-auto py-0">
-              <NavLink href="/" children="Home" />
-              <NavLink href="/biz" children="Biz" />
-              <NavLink href="/tech" children="Tech" />
-              <NavLink href="/policy" children="Policy" />
-              <NavLink href="/pop" children="Pop" />
-              <NavLink href="/culture" children="Culture" />
-              <NavDropdown />
-              <NavLink href="/contact" children="Contact" />
+              <NavLink href="/" children="Home" onClick={closeNav} />
+              <NavLink href="/biz" children="Biz" onClick={closeNav} />
+              <NavLink href="/tech" children="Tech" onClick={closeNav} />
+              <NavLink href="/policy" children="Policy" onClick={closeNav} />
+              <NavLink href="/pop" children="Pop" onClick={closeNav} />
+              <NavLink href="/culture" children="Culture" onClick={closeNav} />
+              <NavDropdown closeNav={closeNav} />
+              <NavLink href="/contact" children="Contact" onClick={closeNav} />
             </div>
             <div
               className="input-group ml-auto d-none d-lg-flex"
